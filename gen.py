@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""리썸(Re:sum) 법적 고지 페이지 정적 HTML 생성기.
+"""리썸(resum) 법적 고지 페이지 정적 HTML 생성기.
 출처: Notion(개인정보처리방침/이용약관) 본문을 그대로 옮김. 시행일 2026-06-14.
 재생성: python3 gen.py
 """
@@ -98,13 +98,13 @@ PAGE = """<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="index,follow">
-<title>{title} | 리썸(Re:sum)</title>
+<title>{title} | 리썸(resum)</title>
 <style>{css}</style>
 </head>
 <body>
 <div class="wrap">
 <header class="site">
-<div class="brand">리썸 · Re:sum</div>
+<div class="brand">리썸 · resum</div>
 <h1>{title}</h1>
 <p class="meta">{effective}</p>
 </header>
@@ -405,7 +405,7 @@ terms = [
 ]
 
 INDEX_BODY = """
-<p>리썸(Re:sum) 서비스의 약관 및 정책 문서입니다.</p>
+<p>리썸(resum) 서비스의 약관 및 정책 문서입니다.</p>
 <ul class="plain">
 <li><a href="./privacy.html">개인정보 처리방침</a></li>
 <li><a href="./terms.html">서비스 이용약관</a></li>
@@ -421,4 +421,4 @@ def write(path, title, effective, body):
 
 write("privacy.html", "개인정보 처리방침", "시행일: 2026. 6. 14.", render_blocks(privacy))
 write("terms.html", "서비스 이용약관", "시행일: 2026. 6. 14.", render_blocks(terms))
-write("index.html", "약관 및 정책", "리썸(Re:sum)", INDEX_BODY)
+write("index.html", "약관 및 정책", "리썸(resum)", INDEX_BODY)
